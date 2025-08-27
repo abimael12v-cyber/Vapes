@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Vapes</title>
+    <style>
+        /* Reset básico */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+        body { background-color: #f9f9f9; color: #333; }
+
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover { text-decoration: underline; }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1606813908588-1a3c547d9e2c?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff6b6b;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #ff4b4b;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media(max-width: 768px){
+            .products { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tienda VapeX</h1>
+        <nav>
+            <a href="#productos">Productos</a>
+            <a href="#about">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        ¡Vive la experiencia VapeX!
+    </div>
+
+    <section class="section" id="productos">
+        <h2>Productos Destacados</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1616617619124-1296b6c431f5?auto=format&fit=crop&w=800&q=80" alt="Vape Azul">
+                <h3>Vape Azul</h3>
+                <p>Dispositivo compacto, batería duradera.</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1616617618987-44e89f74b7b3?auto=format&fit=crop&w=800&q=80" alt="Vape Rojo">
+                <h3>Vape Rojo</h3>
+                <p>Sabor intenso y diseño moderno.</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1616617619000-6a4f0a4e6b4f?auto=format&fit=crop&w=800&q=80" alt="Vape Verde">
+                <h3>Vape Verde</h3>
+                <p>Portátil y fácil de usar para principiantes.</p>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <h2>Sobre Nosotros</h2>
+        <p>En VapeX ofrecemos los mejores dispositivos de vapeo con garantía de calidad y excelente atención al cliente. Nuestro objetivo es brindar una experiencia segura y placentera a todos nuestros usuarios.</p>
+    </section>
+
+    <section class="section" id="contacto">
+        <h2>Contacto</h2>
+        <form style="max-width:400px; margin:0 auto; display:flex; flex-direction:column;" onsubmit="alert('Formulario enviado!'); return false;">
+            <input type="text" placeholder="Nombre" required style="padding:10px; margin-bottom:10px; border-radius:5px; border:1px solid #ccc;">
+            <input type="email" placeholder="Correo" required style="padding:10px; margin-bottom:10px; border-radius:5px; border:1px solid #ccc;">
+            <textarea placeholder="Mensaje" required style="padding:10px; margin-bottom:10px; border-radius:5px; border:1px solid #ccc;"></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2025 VapeX. Todos los derechos reservados.
+    </footer>
+</body>
+</html>
